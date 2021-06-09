@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&family=Raleway:wght@900&display=swap');
 
 body {
   color:ffb000;
   background-color:604200;
-  font-family:Raleway, sans-serif;
+  font-family:Whitney, sans-serif;
   font-weight:400;
   font-size:16;
 }
+
+code {font-family: Fira Code, monospace; background-color:#3e2b00;}
+
+h1 {font-family:Raleway, Whitney, sans-serif;}
 
 main {
   background-color: 523800;
@@ -15,38 +19,39 @@ main {
   text-align:left;
 }
 
-table {
+table.s {
     border-collapse: collapse;
     margin: 25px 0;
 	min-width: 100%;
 	max-width: 100%;
 	border-radius: 15px;
-	-moz-border-radius: 15px;
-    border-right: 2px solid #ffb000;
-    border-bottom: 2px solid #ffb000;
+    border: 2px solid #ffb000;
 }
 
-table th {
+table.s th {
     background-color: #ffb000;
     color: #604200;
     text-align: left;
 }
 
-table th,
-table td {
+table.s th,
+table.s td {
     padding: 12px 15px;
 }
 
-table tr {
-    border-bottom: 1px solid #604200;
+table.s tr {
     background-color: #604200;
 }
 
-table tr:nth-of-type(even) {
+table.s tr:nth-of-type(even) {
     background-color: #523800;
 }
 
-table tr.down, table th {border-bottom: 2px solid #ffb000;}
+table.s tr.down {border-bottom: 2px solid #ffb000;}
+table.s th.down {border-bottom: 2px solid #604200;}
+
+table.s td.right {border-right: 2px solid #ffb000;}
+table.s th.right {border-right: 2px solid #604200;}
 
 a:link {
   color: #0080ff;
@@ -68,4 +73,43 @@ a:active {
   text-decoration: underline;
 }
 
-iframe {border:0px}
+:target, :target code {
+	-webkit-animation: target-fade 1s;
+	-moz-animation: target-fade 1s;
+	-o-animation: target-fade 1s;
+	animation: target-fade 1s;
+}
+
+@-webkit-keyframes target-fade {
+	from { background-color: white; }
+	to { background-color: transparent; }
+}
+
+@-moz-keyframes target-fade {
+	from { background-color: white; }
+	to { background-color: transparent; }
+}
+
+@-o-keyframes target-fade {
+	from { background-color: white; }
+	to { background-color: transparent; }
+}
+
+@keyframes target-fade {
+	from { background-color: white; }
+	to { background-color: transparent; }
+}
+
+@font-face {
+font-family: 'Whitney';
+font-style: normal;
+font-weight: 700;
+src: local('Whitney Bold'), url('whitneybold.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Whitney';
+font-style: normal;
+font-weight: normal;
+src: local('Whitney Book Regular'), url('whitneybook.woff') format('woff');
+}
